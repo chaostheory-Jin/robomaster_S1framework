@@ -1,0 +1,16 @@
+robomasterpy-0.1.1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+robomasterpy-0.1.1.dist-info/LICENSE,sha256=DUncvHA9ucIYgaOIUFkFR_g12ADI6V7tHAm5wmthL1M,1067
+robomasterpy-0.1.1.dist-info/METADATA,sha256=vxNr0vKTHZkcW_1Kao65GjQ-r1I3_l0xcB_9VdyFcHA,4598
+robomasterpy-0.1.1.dist-info/RECORD,,
+robomasterpy-0.1.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+robomasterpy-0.1.1.dist-info/top_level.txt,sha256=S0mNI4a-TJn-7FFQdl60eNrr3pRTv_ilmJRGfVSKfhI,13
+robomasterpy/__init__.py,sha256=pxTZ6IhPh_qEBdQ993BvWtVhRzdOfY6rB0c-p0nY504,2779
+robomasterpy/__pycache__/__init__.cpython-38.pyc,,
+robomasterpy/__pycache__/__version__.cpython-38.pyc,,
+robomasterpy/__pycache__/client.cpython-38.pyc,,
+robomasterpy/__pycache__/framework.cpython-38.pyc,,
+robomasterpy/__pycache__/measure.cpython-38.pyc,,
+robomasterpy/__version__.py,sha256=S0Hg7xQ16QAO5p9HvNlfhz62XAffxVdXFuXjFAYSFtw,1939
+robomasterpy/client.py,sha256=kcB8I_d5ts6POXT6nqrh7szvJdMtaXsR7rgHUr3tStE,29056
+robomasterpy/framework.py,sha256=_pSeIpxZt1bL6cB1lCfJTlftisVzlcdBRu_hrCjZuD4,26053
+robomasterpy/measure.py,sha256=zZBSumTxpIwjutmq7S7mAFCIAEpod3p5p9Tcuxodmro,4272
