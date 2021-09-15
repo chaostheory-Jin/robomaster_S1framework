@@ -20,45 +20,70 @@
 
 安装：一般pip install就能解决
 
-**目录结构：**
+或者使用目录下的requirements安装。
 
+使用方法：进入到框架主目录下，打开终端，在终端内使用命令：**pip install -r requirements.txt**
+
+**目录结构：**
+│  control.log
 │  main.py
-│  mode_chooser.py
-│  project.txt
+│  main_process.py
 │  README.md
 │  README.pdf
 │  README.txt
-│  s1process.py
+│  requirements.txt
+│  show.log
+│  tree.txt
+│  window_process.py
 │  
+├─.idea
+│  │  .gitignore
+│  │  misc.xml
+│  │  modules.xml
+│  │  S1framework.iml
+│  │  vcs.xml
+│  │  workspace.xml
+│  │  
+│  └─inspectionProfiles
+│          profiles_settings.xml
+│          Project_Default.xml
+│          
+├─basic
+│  │  basicrobot.py
+│  │  msg.py
+│  │  
+│  └─__pycache__
+│          basicrobot.cpython-38.pyc
+│          msg.cpython-38.pyc
+│          
 ├─code
+│  │  communicate.py
+│  │  mode_chooser.py
 │  │  S1Robot.py
 │  │  ui.py
 │  │  
 │  └─__pycache__
+│          communicate.cpython-38.pyc
+│          mode_chooser.cpython-38.pyc
 │          S1Robot.cpython-38.pyc
 │          ui.cpython-38.pyc
 │          
 ├─pic
-│      17.jpg
-│      A_PyGameMono-8.png
+│      background.jpeg
 │      font.ttf
-│      pygame.ico
-│      pygame_icon.bmp
-│      pygame_icon.tiff
-│      pygame_logo.gif
-│      pygame_powered.gif
-│      pygame_small.gif
-│      pygame_tiny.gif
+│      font2.ttf
 │      s1blue.avi
 │      s1red.avi
-│      u13079_PyGameMono-8.png
 │      
-├─src
-
-│  ……
-
-└─vision
-        Armor.py
+├─vision
+│  │  Armor.py
+│  │  
+│  └─__pycache__
+│          Armor.cpython-38.pyc
+│          
+└─__pycache__
+        main_process.cpython-38.pyc
+        window_process.cpython-38.pyc
 
 ## 3、使用说明
 
@@ -98,7 +123,7 @@ race模式：
 
 正式比赛时的模式，可以选择是否录屏，不建议录屏，会影响代码运行速度。
 
-wasd控制S1运动，底盘运动功率和速度为固定值无法调节，
+wasd控制S1运动，底盘运动功率和速度为固定值无法调节。
 
 **armor.py**
 
@@ -117,5 +142,10 @@ v1.0
 
 S1框架完成
 
-v1.1
-S1框架bug清理完成，添加了日志部分，优化了代码结构
+v1.3
+
+提高了帧率，解决了一系列bug，完善了对战模式功能
+
+v1.4
+
+代码结构改为多进程形式，优化了代码框架
