@@ -40,8 +40,7 @@ def mainprocess(video:bool, color:str,debug:bool,msg_queue,back_queue,alive):
     start_time = time.time()
     if video:
         fourcc = cv.VideoWriter_fourcc(*'XVID')
-        t = time.gmtime()
-        write_video = cv.VideoWriter(f'./{time.strftime("%Y-%m-%d %H:%M:%S", t)}s1red.avi', fourcc, 30, (1280, 720), True)
+        write_video = cv.VideoWriter(f'./s1red.avi', fourcc, 30, (1280, 720), True)
     while alive.value:
         t = time.time()
         if not debug:
@@ -60,6 +59,8 @@ def mainprocess(video:bool, color:str,debug:bool,msg_queue,back_queue,alive):
             back_msg = back_queue.get()
             s1.move(back_msg)
             s1.aim(img,back_msg)
+            if back_msg.go_out:
+                alive.value = False
             logging.debug(f"back msg queue size:{back_queue.qsize()}")
         s1.cool()
         if not msg_queue.full():
@@ -69,8 +70,6 @@ def mainprocess(video:bool, color:str,debug:bool,msg_queue,back_queue,alive):
             massge = Msg(show_image,debug,s1.hp,s1.heat,s1.battery)
             msg_queue.put(massge)
             msg_queue_size = msg_queue.qsize()
-            if msg_queue_size > 10:
-                time.sleep(0.005*msg_queue_size/10)
         else:
             logging.debug("MSG FULL")
         logging.debug(f"control fps:{ 1/(time.time() - t)}")
