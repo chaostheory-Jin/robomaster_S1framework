@@ -25,7 +25,7 @@ class S1Robot(BasicRobot):
         :param debug: 是否处于debug
         :param color: 机器人的颜色
         """
-        super().__init__()
+        super(S1Robot, self).__init__()
         self.color = color
         self.name = name
         self.debug = debug
@@ -80,8 +80,8 @@ class S1Robot(BasicRobot):
             mouse_move_x = back_msg.mouse_move_x
             mouse_move_y = back_msg.mouse_move_y
 
-            yaw = mouse_move_x/SCREEN_SIZE_X * 120
-            pitch = mouse_move_y/SCREEN_SIZE_Y * 20
+            yaw = mouse_move_x/SCREEN_SIZE_X * 30
+            pitch = mouse_move_y/SCREEN_SIZE_Y * 10
         if not self.debug:
             if self.action_state:
                 if 50>abs(yaw)>=3 or 10>abs(pitch)>3:

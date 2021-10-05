@@ -1,6 +1,7 @@
 import logging
 import pygame
 import sys
+
 import main_process
 
 
@@ -14,22 +15,25 @@ class ModeChooser:
         self.video = False            #是否录像
         assert color in self.__colors,'color must be red or blue'
 
-    def mode_set(self,mode:str,msg_queue,back_queue,alive):
+    def mode_set(self,mode:str,msg_queue,back_queue,alive,lock):
         if self.mode in self.__modes:
             self.mode = mode
         else:
             logging.info("Mode Error,now mode:",self.mode)
         if self.mode == 'debug':
             main_process.mainprocess(self.video,self.color,
-                                     debug=True,msg_queue=msg_queue,back_queue=back_queue,alive=alive)
+                                     debug=True,
+                                     msg_queue=msg_queue,
+                                     back_queue=back_queue,
+                                     alive=alive,
+                                     lock=lock)
         if self.mode == 'race':
             main_process.mainprocess(self.video,self.color,
-                                     debug=False,msg_queue=msg_queue,back_queue=back_queue,alive=alive)
-
-    def close(self,alive):
-        alive.value = False
-        pygame.quit()
-        sys.exit()
+                                     debug=False,
+                                     msg_queue=msg_queue,
+                                     back_queue=back_queue,
+                                     alive=alive,
+                                     lock = lock)
 
 
 
